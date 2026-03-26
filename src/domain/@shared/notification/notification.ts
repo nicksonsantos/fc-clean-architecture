@@ -18,6 +18,10 @@ export default class Notification {
     return this.errors;
   }
 
+  clearErrors(): void {
+    this.errors = [];
+  }
+
   messages(context?: string): string {
     let message = "";
     this.errors.forEach((error) => {
