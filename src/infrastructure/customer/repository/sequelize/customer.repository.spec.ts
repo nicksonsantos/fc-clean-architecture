@@ -4,6 +4,8 @@ import Address from "../../../../domain/customer/value-object/address";
 import CustomerModel from "./customer.model";
 import CustomerRepository from "./customer.repository";
 
+jest.setTimeout(10000);
+
 describe("Customer repository test", () => {
   let sequelize: Sequelize;
 

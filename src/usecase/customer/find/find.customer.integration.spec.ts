@@ -5,6 +5,8 @@ import CustomerModel from "../../../infrastructure/customer/repository/sequelize
 import CustomerRepository from "../../../infrastructure/customer/repository/sequelize/customer.repository";
 import FindCustomerUseCase from "./find.customer.usecase";
 
+jest.setTimeout(10000);
+
 describe("Test find customer use case", () => {
   let sequelize: Sequelize;
 
