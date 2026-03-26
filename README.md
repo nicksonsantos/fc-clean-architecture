@@ -25,7 +25,16 @@ npm test
 
 - Use cases: `src/usecase/product/*`
 - Repositório Sequelize: `src/infrastructure/product/repository/sequelize/*`
+- Rotas API: `src/infrastructure/api/routes/*`
 - DTOs: `src/usecase/product/*/*.dto.ts`
+
+## Endpoint
+
+- GET `/product` -> retorna `{ products: [{ id, name, price }, ...] }` com status 200
+
+## Teste E2E adicionado
+
+- `src/infrastructure/api/__tests__/product.e2e.spec.ts`
 
 ## Observação
 
