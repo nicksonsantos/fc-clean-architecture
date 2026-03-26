@@ -42,6 +42,12 @@ npm test
 - Erros são acumulados no objeto `Notification` e lançados como `NotificationError` na criação e em alterações de estado inválidas.
 - Novo caso de teste para múltiplos erros em `src/domain/product/entity/product.spec.ts`.
 
+## Validator Pattern em Product
+
+- `ProductYupValidator` (`src/domain/product/validator/product.yup.validator.ts`): Realiza todas as validações de negócio usando Yup.
+- `ProductValidatorFactory` (`src/domain/product/factory/product.validator.factory.ts`): Factory que instancia o validador.
+- Produto desacoplado da lógica de validação: a entidade delega validação ao validador, mantendo só a orquestração.
+
 ## Observação
 
 - Foi adicionado `jest.setTimeout(10000)` para testes de integração baseados em SQLite em memória, para evitar timeout por sync do Sequelize.
